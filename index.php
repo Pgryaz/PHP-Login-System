@@ -1,4 +1,10 @@
 
+<?php 
+        // Allow Config
+        define('__CONFIG__', true);
+        // Require config
+        require_once "inc/config.php"; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,38 +21,16 @@
 <body>
 
 <div class="uk-section uk-container ">
-    <div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
-    <form class="uk-form-stacked js-login">
-
-    <div class="uk-margin">
-        <label class="uk-form-label" for="form-stacked-text">Email</label>
-        <div class="uk-form-controls">
-            <input class="uk-input" id="form-stacked-text" type="email" required="required" placeholder="email@email.com">
-        </div>
-    </div>
-    <div class="uk-margin">
-        <label class="uk-form-label" for="form-stacked-text">Password</label>
-        <div class="uk-form-controls">
-            <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Your Password">
-        </div>
-    </div>
-    <div class="uk-margin">
-        <button class="uk-button uk-button-default" type="submit">Login</button>
-    </div>
-
-   
-
-</form>
-    </div>
+    <?php 
+        echo "Hello, today is";
+       echo date(" l");
+       ?>
+       <p>
+        <a href="/login.php">Login</a>
+        <a href="/register.php">Register</a>
 </div>
 
-
-    <!-- JQuery is required -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.13/js/uikit.min.js" integrity="sha512-2OFxEsAb++W1AFsn9U6fcJmNvPab6fWZsOCRVEbSR18Y+J8IDvDpd56ru2x3GPANYVxflJNwLVgNO4hSb8uZGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.16.13/js/uikit-icons.min.js" integrity="sha512-twVN48SyRH8tCQIYm2ksFNsBJHtob4sEwh37fqTD5gi1nCfBRZ01aNXnm2V9WAjq69tfZ76RQGrBeN92QlL7pQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<?php require_once "inc/footer.php"; ?>
+    
 </body>
 </html>
